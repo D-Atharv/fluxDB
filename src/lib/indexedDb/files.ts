@@ -1,9 +1,9 @@
 // lib/indexedDB/files.ts
 import { v4 as uuidv4 } from "uuid";
-import { initDB } from "./db";
-import { FileEntry } from "../types";
+import { initDB } from "../db";
+import type { FileEntry } from "../../types/types";
 
-export async function saveFile(entry: Omit<FileEntry, "key" | "uploadedAt">) {
+export async function putFile(entry: Omit<FileEntry, "key" | "uploadedAt">) {
   const db = await initDB();
   const fileEntry: FileEntry = {
     key: uuidv4(),

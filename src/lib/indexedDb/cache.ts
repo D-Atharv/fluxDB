@@ -1,7 +1,7 @@
 // lib/indexedDB/cache.ts
 import { v4 as uuidv4 } from "uuid";
-import { initDB } from "./db";
-import { CacheEntry } from "../types";
+import { initDB } from "../db";
+import type { CacheEntry } from "../../types/types";
 
 export async function saveCache(entry: Omit<CacheEntry, "key" | "createdAt">) {
   const db = await initDB();

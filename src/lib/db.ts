@@ -1,6 +1,7 @@
 // lib/indexedDB/db.ts
-import { openDB, IDBPDatabase, DBSchema } from "idb";
-import { FileEntry, CacheEntry } from "../types";
+import { openDB } from "idb";
+import type { IDBPDatabase, DBSchema } from "idb";
+import type { FileEntry, CacheEntry } from "@/types/types";
 
 interface RealtimeQueryDB extends DBSchema {
   files: { key: string; value: FileEntry };
